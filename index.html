@@ -34,19 +34,19 @@
 </style>
 
 <div class="dash">
-  <span class="update-badge">Actualizado al 08 jul 2026 · +51 nuevos alojamientos desde el 31 may 2026</span>
+  <span class="update-badge">Actualizado al 20 jul 2026 · +19 nuevos alojamientos desde el 09 jul 2026</span>
   <h2 style="font-size:18px; font-weight:500; color:var(--color-text-primary); margin-bottom:4px;">Dashboard de Alojamientos</h2>
-  <p style="font-size:12px; color:var(--color-text-secondary); margin-bottom:16px;">Histórico acumulado 17 ago 2024 – 08 jul 2026 · 2,599 alojamientos · 1,750 anfitriones</p>
+  <p style="font-size:12px; color:var(--color-text-secondary); margin-bottom:16px;">Histórico acumulado 17 ago 2024 – 20 jul 2026 · 2,618 alojamientos · 1,759 anfitriones</p>
 
   <div class="kpi-grid">
-    <div class="kpi-card"><div class="val">2,599</div><div class="lbl">Alojamientos totales</div></div>
+    <div class="kpi-card"><div class="val">2,618</div><div class="lbl">Alojamientos totales</div></div>
     <div class="kpi-card"><div class="val">51.6%</div><div class="lbl">Publicados</div></div>
-    <div class="kpi-card"><div class="val">23.8%</div><div class="lbl">En borrador</div></div>
-    <div class="kpi-card alert"><div class="val">1,266</div><div class="lbl">Riesgo doble booking</div></div>
+    <div class="kpi-card"><div class="val">23.9%</div><div class="lbl">En borrador</div></div>
+    <div class="kpi-card alert"><div class="val">1,276</div><div class="lbl">Riesgo doble booking</div></div>
   </div>
 
   <div class="risk-banner">
-    <b>Alerta crítica:</b> 1,266 alojamientos (48.7% del total) están presentes en otras plataformas sin sincronizar calendarios — el mayor riesgo operativo del portafolio.
+    <b>Alerta crítica:</b> 1,276 alojamientos (48.7% del total) están presentes en otras plataformas sin sincronizar calendarios — el mayor riesgo operativo del portafolio.
   </div>
 
   <p class="section-title">Estado del portafolio</p>
@@ -54,10 +54,10 @@
     <div class="chart-card">
       <div class="chart-title">Distribución por status</div>
       <div class="legend">
-        <span><span class="legend-dot" style="background:#1D9E75"></span>Publicado 1,340 (51.6%)</span>
-        <span><span class="legend-dot" style="background:#EF9F27"></span>Borrador 618 (23.8%)</span>
-        <span><span class="legend-dot" style="background:#378ADD"></span>Pausado 340 (13.1%)</span>
-        <span><span class="legend-dot" style="background:#E24B4A"></span>Suspendido 301 (11.6%)</span>
+        <span><span class="legend-dot" style="background:#1D9E75"></span>Publicado 1,352 (51.6%)</span>
+        <span><span class="legend-dot" style="background:#EF9F27"></span>Borrador 625 (23.9%)</span>
+        <span><span class="legend-dot" style="background:#378ADD"></span>Pausado 340 (13.0%)</span>
+        <span><span class="legend-dot" style="background:#E24B4A"></span>Suspendido 301 (11.5%)</span>
       </div>
       <div style="position:relative; height:200px;"><canvas id="cStatus"></canvas></div>
     </div>
@@ -66,7 +66,8 @@
       <div class="legend">
         <span><span class="legend-dot" style="background:#7F77DD"></span>P1 Ago24–Jul25</span>
         <span><span class="legend-dot" style="background:#1D9E75"></span>P2 Ago25–May26</span>
-        <span><span class="legend-dot" style="background:#EF9F27"></span>P3 Jun–Jul26</span>
+        <span><span class="legend-dot" style="background:#EF9F27"></span>P3 31may–06jul26</span>
+        <span><span class="legend-dot" style="background:#E24B4A"></span>P4 09–18jul26</span>
       </div>
       <div style="position:relative; height:200px;"><canvas id="cPeriod"></canvas></div>
     </div>
@@ -98,26 +99,26 @@
     <div class="chart-card">
       <div class="chart-title">Presente en otras plataformas</div>
       <div class="legend">
-        <span><span class="legend-dot" style="background:#534AB7"></span>Sí 1,676 (64.5%)</span>
-        <span><span class="legend-dot" style="background:#B4B2A9"></span>No 923 (35.5%)</span>
+        <span><span class="legend-dot" style="background:#534AB7"></span>Sí 1,690 (64.5%)</span>
+        <span><span class="legend-dot" style="background:#B4B2A9"></span>No 928 (35.4%)</span>
       </div>
       <div style="position:relative; height:180px;"><canvas id="cPlataformas"></canvas></div>
     </div>
     <div class="chart-card">
       <div class="chart-title">Sincronizado con calendarios externos</div>
       <div class="legend">
-        <span><span class="legend-dot" style="background:#1D9E75"></span>Sí 459 (17.7%)</span>
-        <span><span class="legend-dot" style="background:#B4B2A9"></span>No 2,140 (82.3%)</span>
+        <span><span class="legend-dot" style="background:#1D9E75"></span>Sí 463 (17.7%)</span>
+        <span><span class="legend-dot" style="background:#B4B2A9"></span>No 2,155 (82.3%)</span>
       </div>
       <div style="position:relative; height:180px;"><canvas id="cSinc"></canvas></div>
     </div>
   </div>
 
   <div class="cruce-grid">
-    <div class="cruce-box"><div class="val" style="color:#E24B4A;">1,266</div><div class="lbl">Otras plat. sin sinc.<br>(riesgo alto)</div></div>
-    <div class="cruce-box"><div class="val" style="color:#1D9E75;">410</div><div class="lbl">Otras plat. + sinc.<br>(correcto)</div></div>
+    <div class="cruce-box"><div class="val" style="color:#E24B4A;">1,276</div><div class="lbl">Otras plat. sin sinc.<br>(riesgo alto)</div></div>
+    <div class="cruce-box"><div class="val" style="color:#1D9E75;">414</div><div class="lbl">Otras plat. + sinc.<br>(correcto)</div></div>
     <div class="cruce-box"><div class="val" style="color:#378ADD;">49</div><div class="lbl">Sin otras plat. + sinc.</div></div>
-    <div class="cruce-box"><div class="val" style="color:var(--color-text-secondary);">874</div><div class="lbl">Sin otras plat. sin sinc.</div></div>
+    <div class="cruce-box"><div class="val" style="color:var(--color-text-secondary);">879</div><div class="lbl">Sin otras plat. sin sinc.</div></div>
   </div>
 
   <div class="chart-full">
@@ -141,9 +142,9 @@
     <div class="chart-card">
       <div class="chart-title">Anfitriones por cantidad de alojamientos</div>
       <div class="legend">
-        <span><span class="legend-dot" style="background:#B5D4F4"></span>1 (77.5%)</span>
-        <span><span class="legend-dot" style="background:#378ADD"></span>2–5 (20.5%)</span>
-        <span><span class="legend-dot" style="background:#185FA5"></span>6–10 (1.5%)</span>
+        <span><span class="legend-dot" style="background:#B5D4F4"></span>1 (77.3%)</span>
+        <span><span class="legend-dot" style="background:#378ADD"></span>2–5 (20.6%)</span>
+        <span><span class="legend-dot" style="background:#185FA5"></span>6–10 (1.6%)</span>
         <span><span class="legend-dot" style="background:#0C447C"></span>11+ (0.5%)</span>
       </div>
       <div style="position:relative; height:180px;"><canvas id="cAnfDist"></canvas></div>
@@ -151,8 +152,8 @@
     <div class="chart-card">
       <div class="chart-title">Dirección de facturación asignada</div>
       <div class="legend">
-        <span><span class="legend-dot" style="background:#E24B4A"></span>Sin dirección 2,429 (93.4%)</span>
-        <span><span class="legend-dot" style="background:#1D9E75"></span>Con dirección 170 (6.6%)</span>
+        <span><span class="legend-dot" style="background:#E24B4A"></span>Sin dirección 2,446 (93.4%)</span>
+        <span><span class="legend-dot" style="background:#1D9E75"></span>Con dirección 172 (6.6%)</span>
       </div>
       <div style="position:relative; height:180px;"><canvas id="cFact"></canvas></div>
     </div>
@@ -195,7 +196,7 @@ const gridC = { color: 'rgba(128,128,128,0.1)' };
 
 new Chart(document.getElementById('cStatus'), {
   type: 'doughnut',
-  data: { labels: ['Publicado','Borrador','Pausado','Suspendido'], datasets: [{ data: [1340,618,340,301], backgroundColor: ['#1D9E75','#EF9F27','#378ADD','#E24B4A'], borderWidth: 2, borderColor: 'transparent' }] },
+  data: { labels: ['Publicado','Borrador','Pausado','Suspendido'], datasets: [{ data: [1352,625,340,301], backgroundColor: ['#1D9E75','#EF9F27','#378ADD','#E24B4A'], borderWidth: 2, borderColor: 'transparent' }] },
   options: { ...gCo, cutout: '60%', plugins: { legend: { display: false } } }
 });
 
@@ -206,7 +207,8 @@ new Chart(document.getElementById('cPeriod'), {
     datasets: [
       { label: 'P1 Ago24–Jul25', data: [815,350,273,254], backgroundColor: '#7F77DD' },
       { label: 'P2 Ago25–May26', data: [499,244,66,47], backgroundColor: '#1D9E75' },
-      { label: 'P3 Jun–Jul26', data: [26,24,1,0], backgroundColor: '#EF9F27' }
+      { label: 'P3 31may–06jul26', data: [26,24,1,0], backgroundColor: '#EF9F27' },
+      { label: 'P4 09–18jul26', data: [12,7,0,0], backgroundColor: '#E24B4A' }
     ]
   },
   options: { ...gCo, plugins: { legend: { display: false } }, scales: { x: { ticks: { font: { size: 11 } }, grid: gridC }, y: { grid: gridC, ticks: { font: { size: 11 } } } } }
@@ -216,7 +218,7 @@ new Chart(document.getElementById('cTrend'), {
   type: 'line',
   data: {
     labels: ['Ago 24','Sep','Oct','Nov','Dic','Ene 25','Feb','Mar','Abr','May','Jun','Jul','Ago 25','Sep','Oct','Nov','Dic','Ene 26','Feb','Mar','Abr','May','Jun','Jul (parcial)'],
-    datasets: [{ label: 'Altas', data: [194,326,188,137,123,158,110,88,101,83,69,115,105,85,81,79,95,74,79,109,75,79,43,3], borderColor: '#378ADD', backgroundColor: 'rgba(55,138,221,0.08)', tension: 0.3, fill: true, pointRadius: 3, borderWidth: 2 }]
+    datasets: [{ label: 'Altas', data: [194,326,188,137,123,158,110,88,101,83,69,115,105,85,81,79,95,74,79,109,75,79,43,22], borderColor: '#378ADD', backgroundColor: 'rgba(55,138,221,0.08)', tension: 0.3, fill: true, pointRadius: 3, borderWidth: 2 }]
   },
   options: { ...gCo, plugins: { legend: { display: false } }, scales: { x: { ticks: { font: { size: 10 }, autoSkip: false, maxRotation: 45 }, grid: gridC }, y: { grid: gridC, ticks: { font: { size: 11 } } } } }
 });
@@ -225,7 +227,7 @@ new Chart(document.getElementById('cEstados'), {
   type: 'bar',
   data: {
     labels: ['Nueva Esparta','Miranda','Falcón','Anzoátegui','Carabobo','La Guaira','Mérida','Dto. Capital','Aragua','Lara','Táchira','Monagas','Bolívar','Zulia','Sucre'],
-    datasets: [{ label: 'Alojamientos', data: [542,398,331,254,180,170,156,149,104,55,45,41,40,38,31], backgroundColor: '#534AB7' }]
+    datasets: [{ label: 'Alojamientos', data: [550,399,331,259,181,170,157,149,104,57,45,42,40,38,31], backgroundColor: '#534AB7' }]
   },
   options: { ...gCo, indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { grid: gridC, ticks: { font: { size: 11 } } }, y: { ticks: { font: { size: 11 } }, grid: { display: false } } } }
 });
@@ -235,8 +237,8 @@ new Chart(document.getElementById('cEstadoStatus'), {
   data: {
     labels: ['Nueva Esparta','Miranda','Falcón','Anzoátegui','Carabobo','La Guaira','Mérida','Dto. Capital'],
     datasets: [
-      { label: 'Publicado', data: [286,189,150,109,96,93,95,77], backgroundColor: '#1D9E75' },
-      { label: 'Borrador', data: [109,87,114,61,33,42,30,40], backgroundColor: '#EF9F27' },
+      { label: 'Publicado', data: [290,190,150,112,97,93,96,77], backgroundColor: '#1D9E75' },
+      { label: 'Borrador', data: [113,87,114,63,33,42,30,40], backgroundColor: '#EF9F27' },
       { label: 'Pausado', data: [72,71,28,40,32,10,20,23], backgroundColor: '#378ADD' },
       { label: 'Suspendido', data: [75,51,39,44,19,25,11,9], backgroundColor: '#E24B4A' }
     ]
@@ -246,13 +248,13 @@ new Chart(document.getElementById('cEstadoStatus'), {
 
 new Chart(document.getElementById('cPlataformas'), {
   type: 'doughnut',
-  data: { labels: ['Sí','No'], datasets: [{ data: [1676,923], backgroundColor: ['#534AB7','#B4B2A9'], borderWidth: 2, borderColor: 'transparent' }] },
+  data: { labels: ['Sí','No'], datasets: [{ data: [1690,928], backgroundColor: ['#534AB7','#B4B2A9'], borderWidth: 2, borderColor: 'transparent' }] },
   options: { ...gCo, cutout: '55%', plugins: { legend: { display: false } } }
 });
 
 new Chart(document.getElementById('cSinc'), {
   type: 'doughnut',
-  data: { labels: ['Sí','No'], datasets: [{ data: [459,2140], backgroundColor: ['#1D9E75','#B4B2A9'], borderWidth: 2, borderColor: 'transparent' }] },
+  data: { labels: ['Sí','No'], datasets: [{ data: [463,2155], backgroundColor: ['#1D9E75','#B4B2A9'], borderWidth: 2, borderColor: 'transparent' }] },
   options: { ...gCo, cutout: '55%', plugins: { legend: { display: false } } }
 });
 
@@ -261,10 +263,10 @@ new Chart(document.getElementById('cCruce'), {
   data: {
     labels: ['Publicado','Borrador','Pausado','Suspendido'],
     datasets: [
-      { label: 'Otras plat. + sinc.', data: [346,1,32,31], backgroundColor: '#1D9E75' },
-      { label: 'Otras plat. sin sinc.', data: [609,296,192,169], backgroundColor: '#E24B4A' },
+      { label: 'Otras plat. + sinc.', data: [350,1,32,31], backgroundColor: '#1D9E75' },
+      { label: 'Otras plat. sin sinc.', data: [615,300,192,169], backgroundColor: '#E24B4A' },
       { label: 'Sin otras plat. + sinc.', data: [43,0,3,3], backgroundColor: '#378ADD' },
-      { label: 'Sin otras plat. sin sinc.', data: [342,321,113,98], backgroundColor: '#888780' }
+      { label: 'Sin otras plat. sin sinc.', data: [344,324,113,98], backgroundColor: '#888780' }
     ]
   },
   options: { ...gCo, plugins: { legend: { display: false } }, scales: { x: { stacked: true, grid: gridC, ticks: { font: { size: 11 } } }, y: { stacked: true, grid: gridC, ticks: { font: { size: 11 } } } } }
@@ -273,15 +275,15 @@ new Chart(document.getElementById('cCruce'), {
 new Chart(document.getElementById('cAnfDist'), {
   type: 'doughnut',
   data: {
-    labels: ['Solo 1 aloj. (77.5%)','2–5 aloj. (20.5%)','6–10 aloj. (1.5%)','11+ aloj. (0.5%)'],
-    datasets: [{ data: [1356,359,27,8], backgroundColor: ['#B5D4F4','#378ADD','#185FA5','#0C447C'], borderWidth: 2, borderColor: 'transparent' }]
+    labels: ['Solo 1 aloj. (77.3%)','2–5 aloj. (20.6%)','6–10 aloj. (1.6%)','11+ aloj. (0.5%)'],
+    datasets: [{ data: [1360,363,28,8], backgroundColor: ['#B5D4F4','#378ADD','#185FA5','#0C447C'], borderWidth: 2, borderColor: 'transparent' }]
   },
   options: { ...gCo, cutout: '50%', plugins: { legend: { display: false } } }
 });
 
 new Chart(document.getElementById('cFact'), {
   type: 'doughnut',
-  data: { labels: ['Sin dirección','Con dirección'], datasets: [{ data: [2429,170], backgroundColor: ['#E24B4A','#1D9E75'], borderWidth: 2, borderColor: 'transparent' }] },
+  data: { labels: ['Sin dirección','Con dirección'], datasets: [{ data: [2446,172], backgroundColor: ['#E24B4A','#1D9E75'], borderWidth: 2, borderColor: 'transparent' }] },
   options: { ...gCo, cutout: '55%', plugins: { legend: { display: false } } }
 });
 </script>
