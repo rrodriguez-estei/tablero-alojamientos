@@ -78,6 +78,15 @@
     <div style="position:relative; height:220px;"><canvas id="cTrend"></canvas></div>
   </div>
 
+  <p class="section-title">Ritmo de carga reciente</p>
+  <div class="chart-full">
+    <div class="chart-title">Alojamientos cargados por día · 31 May – 20 Jul 2026</div>
+    <div class="legend">
+      <span><span class="legend-dot" style="background:#534AB7"></span>Alojamientos nuevos por día · Promedio: <strong id="promDiario" style="color:var(--color-text-primary);">–</strong>/día</span>
+    </div>
+    <div style="position:relative; height:220px;"><canvas id="cDiario"></canvas></div>
+  </div>
+
   <p class="section-title">Distribución geográfica</p>
   <div class="chart-full">
     <div class="chart-title">Top 15 estados por número de alojamientos</div>
@@ -270,6 +279,37 @@ new Chart(document.getElementById('cCruce'), {
     ]
   },
   options: { ...gCo, plugins: { legend: { display: false } }, scales: { x: { stacked: true, grid: gridC, ticks: { font: { size: 11 } } }, y: { stacked: true, grid: gridC, ticks: { font: { size: 11 } } } } }
+});
+
+// Gráfica: alojamientos cargados por día (31 May – 20 Jul 2026)
+const diarioLabels = ['31 May','01 Jun','03 Jun','05 Jun','06 Jun','07 Jun','09 Jun','10 Jun','11 Jun','12 Jun','13 Jun','14 Jun','15 Jun','16 Jun','17 Jun','18 Jun','19 Jun','20 Jun','21 Jun','22 Jun','23 Jun','24 Jun','28 Jun','29 Jun','03 Jul','06 Jul','09 Jul','10 Jul','11 Jul','12 Jul','13 Jul','14 Jul','15 Jul','16 Jul','18 Jul'];
+const diarioData  = [5,1,2,2,2,1,5,2,3,1,2,3,3,1,1,1,1,1,1,1,4,3,1,1,2,1,3,3,2,2,1,4,2,1,1];
+const diarioTotal = diarioData.reduce((a,b)=>a+b,0);
+const promedio    = (diarioTotal / diarioData.length).toFixed(1);
+document.getElementById('promDiario').textContent = promedio;
+new Chart(document.getElementById('cDiario'), {
+  type: 'bar',
+  data: {
+    labels: diarioLabels,
+    datasets: [{
+      label: 'Alojamientos',
+      data: diarioData,
+      backgroundColor: diarioData.map(v => v >= 4 ? '#534AB7' : v >= 2 ? '#7F77DD' : '#B5D4F4'),
+      borderRadius: 3,
+      borderSkipped: false
+    }]
+  },
+  options: {
+    ...gCo,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { title: ctx => ctx[0].label, label: ctx => `${ctx.raw} alojamiento${ctx.raw!==1?'s':''}` } }
+    },
+    scales: {
+      x: { ticks: { font: { size: 10 }, maxRotation: 45, autoSkip: false }, grid: { display: false } },
+      y: { grid: gridC, ticks: { font: { size: 11 }, stepSize: 1 }, beginAtZero: true }
+    }
+  }
 });
 
 new Chart(document.getElementById('cAnfDist'), {
